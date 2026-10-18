@@ -53,6 +53,8 @@ Administrators can:
 
 ## API Endpoints
 
+The backend exposes **19 API endpoints** across the user, car, and reservation routes.
+
 ### User Routes
 
 - `POST /api/users/register` - Register a new user
@@ -60,6 +62,8 @@ Administrators can:
 - `POST /api/users/logout` - Logout a user
 - `GET /api/users/profile` - Get user profile
 - `GET /api/users` - Get all users (admin)
+- `POST /api/users/forgot-password` - Request a password reset
+- `POST /api/users/reset-password/:id/:token` - Reset a user's password
 
 ### Car Routes
 
@@ -76,5 +80,5 @@ Administrators can:
 - `GET /api/reservations` - Get all reservations
 - `GET /api/reservations/client-reservations` - Get client-specific reservations
 - `POST /api/reservations/add/:id` - Add a new reservation
-- `PUT /api/reservations/:id/rate`
-- `POST /api/reservations/:id/approve` - Approve or decline reservations
+- `PUT /api/reservations/:id/rate` - Mark a reservation as rated
+- `POST /api/reservations/:id/approve` - Approve or decline a reservation
